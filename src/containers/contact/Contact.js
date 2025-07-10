@@ -8,6 +8,8 @@ import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Contact() {
+  // Contact.js — inside the component body
+  console.log("contactInfo seen by Contact.js →", contactInfo);
   const {isDark} = useContext(StyleContext);
   return (
     <Fade bottom duration={1000} distance="20px">

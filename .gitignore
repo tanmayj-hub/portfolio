@@ -1,27 +1,38 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# --- dependencies ---
+node_modules/
+.pnpm/
+*.log
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# --- build output ---
+# For Next.js
+.next/
+out/
+# For CRA / Vite (remove if N/A)
+build/
+dist/
 
-# testing
-/coverage
-/build
+# --- testing & coverage ---
+coverage/
 
+# --- tooling caches ---
+.eslintcache
+.turbo/
+parcel-cache/
+.vite/
+tsconfig.tsbuildinfo
 
-# misc
+# --- environment secrets ---
+.env*
+!.env.example        # keep a redacted sample
+
+# --- OS & editor junk ---
 .DS_Store
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+Thumbs.db
+Icon?
+.vscode/
+.idea/
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-#user generated content
-public/profile.json
-public/blogs.json
+# --- user-generated site content you DON’T want versioned ---
+# (comment out if you decide to track them)
+# public/profile.json
+# public/blogs.json

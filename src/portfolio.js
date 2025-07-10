@@ -20,10 +20,10 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Tanmay Jhunjhunwala",
+  title: "Hi all, I'm Tanmay",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "A passionate DevOps, Site Reliability & AWS-Certified Solutions Architect 🚀 | Terraform & GitHub Actions specialist who automates, secures, and cost-optimises hybrid and multi-cloud estates. Brings observability, CI/CD, andagentic AI workflows to unlock continuous innovation"
   ),
   resumeLink:
     "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
@@ -33,13 +33,13 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://github.com/tanmayj-hub",
+  linkedin: "https://www.linkedin.com/in/tanmay-j/",
+  gmail: "tanmay.work96@outlook.com",
+  gitlab: "https://gitlab.com/tanmay.j96",
+  instagram: "https://www.instagram.com/tanmay_jhunjhunwala/",
+  medium: "https://medium.com/@tanmay.work96",
+  stackoverflow: "https://stackoverflow.com/users/30905055/tanmay-j",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -49,15 +49,12 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "AI-POWERED MAVERICK ENGINEERING SCALABLE CLOUD SYSTEMS & AUTOMATING EVERYTHING-AS-CODE",
   skills: [
-    emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
-    )
+    emoji("⚡ Architect secure, scalable AWS & hybrid infrastructures"),
+    emoji("⚡ Engineer agentic AI workflows with LangGraph & Bedrock Agents"),
+    emoji("⚡ Automate Terraform-driven IaC and GitHub Actions CI/CD pipelines"),
+    emoji("⚡ Enforce observability, Kubernetes resilience, and FinOps cost control")
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
@@ -65,56 +62,52 @@ https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
-    },
-    {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
-    },
-    {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
-    },
-    {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
-    },
-    {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
-    },
-    {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
-    },
-    {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
-    },
-    {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
-    },
-    {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
+      skillName: "AWS",
       fontAwesomeClassname: "fab fa-aws"
     },
     {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
+      skillName: "Serverless",
+      fontAwesomeClassname: "fas fa-bolt"
     },
     {
-      skillName: "python",
+      skillName: "Kubernetes",
+      fontAwesomeClassname: "fas fa-cubes"
+    },
+    {
+      skillName: "Docker",
+      fontAwesomeClassname: "fab fa-docker"
+    },
+    {
+      skillName: "Terraform/CDK",
+      fontAwesomeClassname: "fas fa-code-branch"
+    },
+    {
+      skillName: "Github-actions",
+      fontAwesomeClassname: "fab fa-github"
+    },
+    {
+      skillName: "IAM Security",
+      fontAwesomeClassname: "fas fa-shield-alt"
+    },
+    {
+      skillName: "Agentic AI",
+      fontAwesomeClassname: "fas fa-robot"
+    },
+    {
+      skillName: "LangGraph",
+      fontAwesomeClassname: "fas fa-project-diagram"
+    },
+    {
+      skillName: "Python",
       fontAwesomeClassname: "fab fa-python"
     },
     {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "React",
+      fontAwesomeClassname: "fab fa-react"
+    },
+    {
+      skillName: "Typescript",
+      fontAwesomeClassname: "fab fa-js"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -126,23 +119,34 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "George Brown College",
+      logo: require("./assets/images/gbclogo.webp"),
+      subHeader: "Post Graduate Certificate in Cloud Computing Technologies",
+      duration: "May 2024 - Apr 2025, GPA 3.93",
+      // desc: "Built production-grade E-commerce platform on EKS with Node/TypeScript microservices behind ALB, DynamoDB + Cognito for data & auth, GitHub Actions CI/CD, accelerated and secured by CloudFront with WAF.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "A three-term Ontario graduate certificate that fast-tracks talent into cloud roles through nonstop Azure, AWS and Microsoft 365 labs. Students master Linux/Windows admin, networking, architecture, security and DevOps automation, then prove it in an industry capstone that aligns with AWS SA & Azure Admin/Architect exams."
       ]
     },
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Conestoga College",
+      logo: require("./assets/images/conestogalogo.webp"),
+      subHeader: "Post Graduate Certificate in Project Management",
+      duration: "Sep 2023 - Apr 2024, GPA 3.58",
+      // desc: "",
+      descBullets: [
+        "A two-term Ontario graduate certificate that blends PMBOK® and Agile Scrum in hands-on MS Project labs; as a PMI® ATP, it supplies all PDUs for PMP®, CAPM®, ACP® and RMP® prep and culminates in a portfolio-grade capstone."
+      ]
+    },
+    {
+      schoolName: "Vellore Institute of Technology",
+      logo: require("./assets/images/vitlogo.webp"),
+      subHeader: "Bachelor of Technology in Mechanical Engineering",
+      duration: "May 2014 - Apr 2019, GPA 3.18",
+      // desc: "",
+      descBullets: [
+        "ABET-accredited four-year B.Tech that pairs core design, thermofluids & manufacturing with 160+ electives (CFD, robotics, smart manufacturing, renewables); CDIO projects and an industry capstone turn theory into portfolio prototypes for global R&D and plant-floor roles."
+        ]
     }
   ]
 };
@@ -153,16 +157,20 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
+      Stack: "AWS Cloud Architecture", //Insert stack or technology you have experience in
       progressPercentage: "90%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "Infrastructure as Code & CI/CD",
+      progressPercentage: "85%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Containers & Kubernetes",
+      progressPercentage: "80%"
+    },
+    {
+      Stack: "Agentic and Generative AI",
+      progressPercentage: "70%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -174,29 +182,47 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Business Sales Consultant",
+      company: "Bell Canada",
+      companylogo: require("./assets/images/belllogo.webp"),
+      date: "Oct 2024 - Present",
+      //desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Exceeded 120% of monthly quota by architecting bespoke, multi-service connectivity portfolios to each client's ROI objectives.",
+        "Leveraged TCO and usage-projection analyses to right-size solutions, elevating ARPU by 30%.",
+        "Mentored onboarding consultants through structured solution-architecture playbooks and cost-benefit frameworks."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Product Process Specialist",
+      company: "Best Buy Canada",
+      companylogo: require("./assets/images/bestbuylogo.webp"),
+      date: "Oct 2023 - Oct 2024",
+      descBullets: [
+        "Oversaw high-volume inventory, streamlined cross-department workflows, and sustained 100% stock accuracy while enforcing security controls for high-value assets; earned the Shrink-Prevention Excellence Reward.",
+        "Steered Blueprint Team leadership, turning frontline feedback into process improvements that cut stock put-away time by 25% and lifted employee-engagement scores by 15%."
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Self Employed Broker & Consultant",
+      company: "Yarn Trading",
+      companylogo: require("./assets/images/yarnlogo.webp"),
+      date: "Jan 2021 - Aug 2023",
+      descBullets: [
+        "Brokered ~US $29 M in annual contracts (60% repeat-clients / 40% new-clients) by applying real-time price analytics and inventory forecasts to optimize trade timing and safeguard margins.",
+        "Developed a mobile, real-time order-tracking dashboard that automated confirmations and shortened settlement cycles by 40%, strengthening process automation, data governance, and cost control."
+      ]
+    },
+    {
+      role: "AWS Cloud Associate - Project Engineer",
+      company: "Wipro Technologies",
+      companylogo: require("./assets/images/wiprologo.webp"),
+      date: "Oct 2019 - Dec 2020",
+      descBullets: [
+        "Delivered a zero-downtime migration of legacy RMS systems to AWS (S3, RDS PostgreSQL, EC2, EKS) as part of 60-engineer program, implementing least-privilege IAM roles and VPC security-group controls.", 
+        "Containerized 20 + services with Docker, Kubernetes manifests, and AWS CloudFormation, automated blue-green deployments via AWS CodeDeploy and CLI scripts, providing repeatable, scalable release pipelines.", 
+        "Built Terraform / CloudFormation modules and CloudWatch alarms that cut environment spin-up time by 70%."
+      ]
     }
   ]
 };
@@ -239,7 +265,7 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -248,54 +274,56 @@ const bigProjects = {
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "Certifications and milestone achievements that define my professional journey.",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "AWS Certified Solutions Architect - Associate",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Industry-recognized proof of skill in architecting secure, scalable, cost-optimized AWS cloud solutions—mastering VPC, IAM, EC2, S3, RDS, load balancing, and auto-scaling best practices.",
+      image: require("./assets/images/awsSolArchLogo.webp"),
+      imageAlt: "AWS Sol Arch Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          url: "https://www.credly.com/badges/3d693336-2f44-4c15-80c8-449343f09b24/public_url"
         }
       ]
     },
     {
-      title: "Google Assistant Action",
+      title: "AWS Certified Cloud Practitioner",
       subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+        "Validates foundational cloud fluency—understanding AWS global infrastructure, core services (EC2, S3, Lambda), security & compliance, billing models, and total-cost-of-ownership principles—so teams can confidently launch, govern, and optimize workloads in the AWS Cloud.",
+      image: require("./assets/images/awsCloudPrac.webp"),
+      imageAlt: "AWS Cloud Prac Logo",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+          name: "Certification",
+          url: "https://www.credly.com/org/amazon-web-services/badge/aws-certified-cloud-practitioner"
         }
       ]
     },
-
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "AI Agents in LangGraph",
+      subtitle: "Specialized credential in building agentic AI pipelines with LangChain’s LangGraph and Tavily—designing node-based graphs, integrating agentic search, adding state persistence & streaming, inserting human-in-the-loop gates, and deploying adaptive chatbots, document processors, and other generative-AI applications.",
+      image: require("./assets/images/dlai-celebration-bg.webp"),
+      imageAlt: "LangGraph Logo",
       footerLink: [
-        {name: "Certification", url: ""},
         {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: "Certification",
+          url: "https://learn.deeplearning.ai/accomplishments/58e065bd-c6e5-4844-82ea-26871061d6bc?usp=sharing"
+        }
+      ]
+    },
+    {
+      title: "ChatGPT Prompt Engineering for Developers",
+      subtitle: "Specialized credential proving proficiency in designing zero-/few-shot and chain-of-thought prompts for GPT-4 and other LLMs—powering tasks like summarization, classification, data extraction, and creative generation—and integrating them into production apps via the OpenAI API, LangChain, and best-practice safety checks.",
+      image: require("./assets/images/dlai-celebration-bg1.webp"),
+      imageAlt: "Prompt Engg Logo",
+      footerLink: [
+        {
+          name: "Certification",
+          url: "https://learn.deeplearning.ai/accomplishments/37b35c5c-dc05-402a-b0b0-b9abc74a27b6?usp=sharing"
         }
       ]
     }
@@ -309,7 +337,7 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: true, // Set true to display fetched medium blogs instead of hardcoded ones
   blogs: [
     {
       url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
@@ -324,7 +352,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +371,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,34 +384,33 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
   // Please Provide with Your Podcast embeded Link
   display: true // Set false to hide this section, defaults to true
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  title: emoji("Lets Connect!"),
+  subtitle: "Want to Collaborate on a project or just say hi? My Inbox is open for all.",
+  number: "+1 437-660-8904",
+  email_address: "tanmay.work96@outlook.com",
+  display: false
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
