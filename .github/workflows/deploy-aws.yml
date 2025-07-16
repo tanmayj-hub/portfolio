@@ -19,7 +19,7 @@ jobs:
 
     - uses: actions/setup-node@v4
       with:
-        node-version: 18            # ← 1️⃣ bump to 18 (LTS; DevFolio builds fine)
+        node-version: 20            # ← 1️⃣ bump to 18 (LTS; DevFolio builds fine)
         cache: 'npm'
 
     - run: npm ci                  # exact dependency versions
@@ -42,6 +42,6 @@ jobs:
     # ─────────── Invalidate CloudFront ───────────
     - name: Invalidate CloudFront
       run: |
-        aws cloudfront create-invalidation --distribution-id $CF_ID --paths "/*"
+        aws cloudfront create-invalidation --distribution-id $CF_ID --paths '/*'
       env:
         CF_ID: ${{ secrets.CF_DISTRIBUTION_ID }}
