@@ -1,0 +1,47 @@
+name: Build & Deploy to S3
+
+on:
+  push:
+    branches: [ main ]               # deploy every merge to main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    # Needed for GitHub->AWS OIDC
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+    # ─────────── Build ───────────
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 18            # ← 1️⃣ bump to 18 (LTS; DevFolio builds fine)
+        cache: 'npm'
+
+    - run: npm ci                  # exact dependency versions
+    - run: npm run build           # creates the build/ folder
+
+    # ─────────── AWS creds (OIDC) ───────────
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+        aws-region: ${{ secrets.AWS_REGION }}   # 2️⃣ use secret so us-east-2 matches your bucket
+
+    # ─────────── Deploy to S3 ───────────
+    - name: Sync build/ to S3
+      run: |
+        aws s3 sync build/ s3://$S3_BUCKET --delete
+      env:
+        S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}  # 3️⃣ secret value: tanmay-cloud-portfolio
+
+    # ─────────── Invalidate CloudFront ───────────
+    - name: Invalidate CloudFront
+      run: |
+        aws cloudfront create-invalidation --distribution-id $CF_ID --paths "/*"
+      env:
+        CF_ID: ${{ secrets.CF_DISTRIBUTION_ID }}
