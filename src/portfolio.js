@@ -26,7 +26,7 @@ const greeting = {
     "A passionate DevOps, Site Reliability & AWS-Certified Solutions Architect 🚀 | Terraform & GitHub Actions specialist who automates, secures, and cost-optimises hybrid and multi-cloud estates. Brings observability, CI/CD, andagentic AI workflows to unlock continuous innovation"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://d1soakqpxknzap.cloudfront.net/resume_tanmay_jhunjhunwala.pdf", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
