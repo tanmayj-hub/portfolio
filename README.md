@@ -53,7 +53,8 @@ You’ll need **Git**, **Node 20 LTS** (comes with **npm 10+**)
 node ≥ 20.x
 npm  ≥ 10.x
 git  ≥ 2.17
-````
+
+```
 
 ---
 
@@ -196,5 +197,3 @@ PRs welcome! Planned enhancements: LinkedIn API integration, Gatsby migration, e
 
 © 2025 Tanmay Jhunjhunwala — GPL-3.0
 
-```
-```
