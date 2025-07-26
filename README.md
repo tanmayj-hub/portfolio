@@ -197,3 +197,4 @@ PRs welcome! Planned enhancements: LinkedIn API integration, Gatsby migration, e
 
 © 2025 Tanmay Jhunjhunwala — GPL-3.0
 
+````
