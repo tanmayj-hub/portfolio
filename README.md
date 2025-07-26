@@ -1,5 +1,4 @@
-````markdown
-# Cloud + AI Portfolio ⚡️ [![GPL-3.0 License](https://img.shields.io/github/license/tanmayj-hub/portfolio?color=blue)](LICENSE)
+# Cloud + DevOps + AI Portfolio ⚡️ [![GPL-3.0 License](https://img.shields.io/github/license/tanmayj-hub/portfolio?color=blue)](LICENSE)
 
 ## A clean, beautiful & responsive portfolio template for developers — now pre-wired for **AWS S3 + CloudFront**!
 
@@ -13,7 +12,7 @@ Just change `src/portfolio.js` to inject your content and tweak global colours i
 Fork it, bend it, break it — it’s yours!
 
 > **What’s special in this fork?**  
-> • Hosted on **private S3 bucket → CloudFront (ACM TLS, Route 53)**  
+> • Hosted on **private S3 bucket → CloudFront** (ACM TLS, Route 53)  
 > • **GitHub Actions** assumes an **OIDC IAM role** — no long-lived AWS keys  
 > • Custom domain **`cloudwithtanmay.com`**  
 > • Baseline upgraded to **Node 20 LTS / npm 10+**
@@ -35,7 +34,7 @@ Fork it, bend it, break it — it’s yours!
 ---
 
 ## Portfolio Sections
-✔️ Summary & About me  ✔️ Skills ✔️ Education ✔️ Work Experience  
+✔️ Summary & About me ✔️ Skills ✔️ Education ✔️ Work Experience  
 ✔️ Open-source Projects ✔️ Big Projects ✔️ Achievements & Certifications 🏆  
 ✔️ Blogs ✔️ Talks ✔️ Podcast ✔️ Contact me ✔️ Twitter Timeline ✔️ GitHub Profile  
 
@@ -45,14 +44,13 @@ Fork it, bend it, break it — it’s yours!
 
 ## Getting Started
 
-You’ll need **Git**, **Node 20 LTS** (comes with **npm 10+**)
+You’ll need **Git**, **Node 20 LTS** (comes with **npm 10+**):
 
 ```text
 node ≥ 20.x
 npm  ≥ 10.x
 git  ≥ 2.17
-
-```
+````
 
 ---
 
@@ -76,7 +74,7 @@ npm start
 ## Linking portfolio to GitHub
 
 If you deploy with **AWS OIDC CI/CD**, you can skip the classic PAT — the workflow already has a short-lived token.
-Otherwise, create a classic PAT and add to `.env`:
+Otherwise, create a PAT and add to `.env`:
 
 ```env
 REACT_APP_GITHUB_TOKEN="YOUR_GITHUB_PAT"
@@ -84,44 +82,41 @@ GITHUB_USERNAME="YOUR_USERNAME"
 USE_GITHUB_DATA="true"
 ```
 
-Set `showGithubProfile` to `true | false` in `portfolio.js` to show or hide the GitHub contact card.
+Set `showGithubProfile` to `true` or `false` in `portfolio.js` to show/hide the GitHub card.
 
 ---
 
 ## Linking blogs section to Medium
 
-Add your Medium user in `.env`:
-
 ```env
 MEDIUM_USERNAME="your-medium-username"
 ```
 
-Set `displayMediumBlogs` in `portfolio.js` as desired.
+Set `displayMediumBlogs` in `portfolio.js` as needed.
 
 ---
 
 ## Change and customize every section according to your need
 
-Edit `/src/portfolio.js`, upload `src/containers/greeting/resume/resume.pdf`, use `emoji()` helper, replace Lottie JSONs in `src/assets/lottie`, tweak Twitter timeline (`twitterDetails`), etc.
+Edit `/src/portfolio.js`, upload `src/containers/greeting/resume/resume.pdf`, use `emoji()`, swap Lottie JSONs in `src/assets/lottie`, tune `twitterDetails`, etc.
 
 ---
 
 ## Deployment
 
-### 🚀 **AWS S3 + CloudFront (recommended)**
+### 🚀 AWS S3 + CloudFront (recommended)
 
 | Step  | Action                                                                                                                 |
 | ----- | ---------------------------------------------------------------------------------------------------------------------- |
-| **1** | Create **private S3 bucket** (Block Public Access ✔; Static-site hosting **disabled**).                                |
-| **2** | Create **CloudFront distribution** with the S3 bucket as origin; note *Distribution ID*.                               |
-| **3** | In **us-east-1**, request an **ACM cert** for apex + `www`; attach to the distribution.                                |
-| **4** | Add Route 53 **A / AAAA Alias** records pointing to CloudFront.                                                        |
+| **1** | Create **private S3 bucket** (Block Public Access ✔; static-site hosting **disabled**).                                |
+| **2** | Create **CloudFront distribution** with that bucket as origin; note *Distribution ID*.                                 |
+| **3** | In **us-east-1** request an **ACM cert** (apex + `www`) and attach to the distro.                                      |
+| **4** | Add Route 53 **A / AAAA Alias** records to CloudFront.                                                                 |
 | **5** | Create an **OIDC IAM role** (trusted to GitHub) with `s3:PutObject`, `s3:ListBucket`, `cloudfront:CreateInvalidation`. |
 | **6** | GitHub Actions workflow:                                                                                               |
 
 ```yaml
 name: Deploy to S3 + CloudFront
-
 on:
   push:
     branches: [main]
@@ -140,14 +135,12 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: aws s3 sync build/ s3://$S3_BUCKET --delete
-      - run: aws cloudfront create-invalidation \
-              --distribution-id $CF_ID --paths '/*'
-
+      - run: aws cloudfront create-invalidation --distribution-id $CF_ID --paths '/*'
 ```
 
-### GitHub Pages & Netlify (still supported)
+### GitHub Pages & Netlify
 
-If you prefer serverless GitHub Pages or Netlify ➡ follow the original instructions below.
+If you prefer GitHub Pages or Netlify, the original instructions below still work.
 
 ---
 
@@ -166,18 +159,17 @@ This section guides you to deploy your portfolio on GitHub pages.
 ### Deploying to Netlify
 
 [![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/saadpasta/developerFolio)
-
 ---
 
 ## Technologies Used
 
-- [React](https://reactjs.org/)
-- [graphql](https://graphql.org/)
-- [apollo-boost](https://www.apollographql.com/docs/react/get-started/)
-- [react-twitter-embed](https://github.com/saurabhnemade/react-twitter-embed)
-- [react-easy-emoji](https://github.com/appfigures/react-easy-emoji)
-- [react-headroom](https://github.com/KyleAMathews/react-headroom)
-- [color-thief](https://github.com/lokesh/color-thief)
+* [React](https://reactjs.org/)
+* [GraphQL](https://graphql.org/)
+* [apollo-boost](https://www.apollographql.com/docs/react/get-started/)
+* [react-twitter-embed](https://github.com/saurabhnemade/react-twitter-embed)
+* [react-easy-emoji](https://github.com/appfigures/react-easy-emoji)
+* [react-headroom](https://github.com/KyleAMathews/react-headroom)
+* [color-thief](https://github.com/lokesh/color-thief)
 
 ---
 
@@ -190,10 +182,8 @@ This section guides you to deploy your portfolio on GitHub pages.
 
 ## For the Future
 
-PRs welcome! Planned enhancements: LinkedIn API integration, Gatsby migration, extra sections.
+PRs welcome! Planned: LinkedIn API integration, Gatsby migration, extra sections.
 
 ---
 
 © 2025 Tanmay Jhunjhunwala — GPL-3.0
-
-````
