@@ -31,8 +31,6 @@ Fork it, bend it, break it — it’s yours!
 - [Technologies Used](#technologies-used)
 - [Illustrations](#illustrations)
 - [For the Future](#for-the-future)
-- [Project Maintainers](#project-maintainers)
-- [Contributors](#contributors)
 
 ---
 
@@ -144,6 +142,7 @@ jobs:
       - run: aws s3 sync build/ s3://$S3_BUCKET --delete
       - run: aws cloudfront create-invalidation \
               --distribution-id $CF_ID --paths '/*'
+
 ```
 
 ### GitHub Pages & Netlify (still supported)
