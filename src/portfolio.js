@@ -13,7 +13,7 @@ const splashScreen = {
   duration: 2000 // Set animation duration as per your animation
 };
 
-// Summary And Greeting Section
+// Summary And Greeting Section of website
 
 const illustration = {
   animated: true // Set to false to use static SVG
