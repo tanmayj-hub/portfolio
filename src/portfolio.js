@@ -23,7 +23,7 @@ const greeting = {
   username: "Tanmay Jhunjhunwala",
   title: "Hi all, I'm Tanmay",
   subTitle: emoji(
-    "A passionate DevOps, Site Reliability & AWS-Certified Solutions Architect 🚀 | Terraform & GitHub Actions specialist who automates, secures, and cost-optimises hybrid and multi-cloud estates. Brings observability, CI/CD, andagentic AI workflows to unlock continuous innovation"
+    "A passionate DevOps, Site Reliability & AWS-Certified Solutions Architect 🚀 | Terraform & GitHub Actions specialist who automates, secures, and cost-optimises hybrid and multi-cloud estates. Brings observability, CI/CD, and agentic AI workflows to unlock continuous innovation"
   ),
   resumeLink:
     "https://cloudwithtanmay.com/resume_tanmay_jhunjhunwala.pdf", // Set to empty to hide the button
